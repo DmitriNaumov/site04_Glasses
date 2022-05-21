@@ -5,10 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Index.html</title>
-	<link rel="icon" href="img/icon.jpg" type="icon/x-icon">
+	<meta name="description" content="Demo landing page for the promotion of sunglasses" />
+	<meta property="og:locale" content="en_EN" />
+	<meta property="og:title" content="Sun Glasses => PortfolioND" />
+	<meta property="og:description" content="Demo landing page for the promotion of sunglasses" />
+	<meta property="og:url" content="https://folio-nd.approvecode.com/project/sun-glasses/index.html" />
+	<meta property="og:image" content="https://folio-nd.approvecode.com/project/sun-glasses/img/og-image.jpg" />
+	<meta property="og:image:width" content="1920" />
+	<meta property="og:image:height" content="1080" />
+	<meta property="og:site_name" content="Sun Glasses" />
+	<title>Sun Glasses</title>
+	<link rel="icon" href="img/icon.png" type="icon/x-icon">
 	<link rel="stylesheet" href="style/normalize.css">
 	<link rel="stylesheet" href="style/fonts.css">
+	<link rel="stylesheet" href="style/aos.css">
 	<link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -17,25 +27,93 @@
 	<!-- div .wrapp -->
 	<div class="wrapp">
 
+		<!-- div .preloader -->
+		<div class="preloader">
+			<div class="preloader__box">
+				<span>sg</span>
+			</div>
+			<span class="preloader__txt">loading...</span>
+		</div>
+		<!-- div .preloader END -->
+
+		<!-- div .menu-container -->
+		<div class="menu-container">
+			<button class="menu-close">close</button>
+
+			<div class="socials">
+				<a href="#">instagram</a>
+				<a href="#">telegram</a>
+			</div>
+
+			<div id="menu" class="menu">
+
+				<div class="menu__item">
+					<a href="#home" class="menu__item-link">home</a>
+					<img src="img/menu/menu1.jpg" alt="menu1" class="menu__item-img">
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>home - home - home - home - home - home - home</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__item">
+					<a href="#popular" class="menu__item-link">showcase</a>
+					<img src="img/menu/menu2.jpg" alt="menu2" class="menu__item-img">
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>showcase - showcase - showcase - showcase - showcase - showcase - showcase</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__item">
+					<a href="#about" class="menu__item-link">about</a>
+					<img src="img/menu/menu3.jpg" alt="menu3" class="menu__item-img">
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>about - about - about - about - about - about - about</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__item">
+					<a href="#contact" class="menu__item-link">contact</a>
+					<img src="img/menu/menu4.jpg" alt="menu4" class="menu__item-img">
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>contact - contact - contact - contact - contact - contact - contact</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- div .menu-container END -->
+
 		<!-- nav .nav -->
 		<nav class="nav">
-			<span class="logo">sg</span>
-			<button class="burger">
+			<span class="logo anim">sg</span>
+			<button class="burger anim">
 				<span class="burger__line"></span>
 				<span class="burger__line"></span>
 			</button>
 		</nav>
-		<!-- nav .nav  END -->
+		<!-- nav .nav END -->
+
+		<!-- button .up -->
+		<button class="up">up</button>
+		<!-- button .up END -->
 
 		<!-- header .header -->
-		<header class="header">
+		<header id="home" class="header">
 
 			<div class="header__wrapp">
 
 				<div class="header__img-wrapp">
 					<div class="header__img-bg">
 						<span class="header__let">x</span>
-						<img src="img/head-img-bg.jpg" alt="head-img-bg.jpg">
+						<img src="img/head-img-bg.jpg" class="img_bg" alt="head-img-bg.jpg">
 					</div>
 					<div class="header__num">
 						<span>01</span>
@@ -76,15 +154,16 @@
 		<main class="main">
 
 			<!-- section .popular -->
-			<section class="popular _padd_top-bott">
+			<section id="popular" class="popular _padd_top-bott">
 
 				<!-- div .section-title -->
 				<div class="section-title">
 					<div class="content">
 						<h2 class="section-title__wrapp">
-							<span class="section-title__item">popular models</span>
-							<span class="section-title__item">popular models</span>
-							<div class="section-title__num">02</div>
+							<span class="section-title__item" data-aos="anim_title">popular models</span>
+							<span class="section-title__item" data-aos="anim_title" data-aos-delay="100">popular
+								models</span>
+							<div class="section-title__num" data-aos="anim_title">02</div>
 						</h2>
 					</div>
 				</div>
@@ -96,38 +175,35 @@
 					<div class="popular__wrapp">
 
 						<div class="popular__item">
-							<div class="popular__img">
-								<img src="img/popular/popular1.png" alt="popular1">
-							</div>
+							<!-- <img src="img/popular/popular1.png" class="popular__img" alt="popular2"> -->
+							<div class="js-loadme displacement" data-src="img/popular/popular1.jpg"></div>
 							<span class="popular__name">model-1</span>
 						</div>
 
 						<div class="popular__item">
-							<div class="popular__img">
-								<img src="img/popular/popular2.png" class="popular__img" alt="popular2">
+							<!-- <img src="img/popular/popular2.png" class="popular__img" alt="popular2"> -->
+							<div class="js-loadme displacement" data-src="img/popular/popular2.jpg"></div>
+							<span class="popular__name">model-2</span>
+						</div>
+
+						<!-- <div class="popular__item">
+							<div class="popular__img displacement">
+								<img src="img/popular/popular3.png" class="popular__img" alt="popular3">
+								<div class="js-loadme" data-src="img/popular/popular3.png"></div>
 							</div>
+							<span class="popular__name">model-3</span>
+						</div> -->
+
+						<div class="popular__item">
+							<!-- <img src="img/popular/popular4.png" class="popular__img" alt="popular2"> -->
+							<div class="js-loadme displacement" data-src="img/popular/popular3.jpg"></div>
 							<span class="popular__name">model-2</span>
 						</div>
 
 						<div class="popular__item">
-							<div class="popular__img">
-								<img src="img/popular/popular3.png" class="popular__img" alt="popular3">
-							</div>
-							<span class="popular__name">model-3</span>
-						</div>
-
-						<div class="popular__item">
-							<div class="popular__img">
-								<img src="img/popular/popular4.png" class="popular__img" alt="popular4">
-							</div>
-							<span class="popular__name">model-4</span>
-						</div>
-
-						<div class="popular__item">
-							<div class="popular__img">
-								<img src="img/popular/popular5.png" class="popular__img" alt="popular5">
-							</div>
-							<span class="popular__name">model-5</span>
+							<!-- <img src="img/popular/popular4.png" class="popular__img" alt="popular2"> -->
+							<div class="js-loadme displacement" data-src="img/popular/popular4.jpg"></div>
+							<span class="popular__name">model-2</span>
 						</div>
 
 					</div>
@@ -137,15 +213,15 @@
 			<!-- section .popular END -->
 
 			<!-- section .about -->
-			<section class="about _padd_top-bott">
+			<section id="about" class="about _padd_top-bott">
 
 				<!-- div .section-title -->
 				<div class="section-title">
 					<div class="content">
 						<h2 class="section-title__wrapp">
-							<span class="section-title__item">about</span>
-							<span class="section-title__item">about</span>
-							<span class="section-title__num">03</span>
+							<span class="section-title__item" data-aos="anim_title">about</span>
+							<span class="section-title__item" data-aos="anim_title" data-aos-delay="100">about</span>
+							<span class="section-title__num" data-aos="anim_title">03</span>
 						</h2>
 					</div>
 				</div>
@@ -158,8 +234,9 @@
 					<div class="about__wrapp">
 
 						<div class="about__img">
-							<div class="about__img-wrapp">
+							<div class="about__img-wrapp" data-aos="anim_height" data-aos-offset="250">
 								<img src="img/about.jpg" alt="about">
+								<!-- <div class="js-loadme" data-src="img/about.jpg"></div> -->
 							</div>
 							<span class="about__span-frame"></span>
 							<span class="about__span-frame"></span>
@@ -167,7 +244,7 @@
 							<span class="about__span-frame"></span>
 						</div>
 
-						<div class="about__txt">
+						<div class="about__txt" data-aos="anim_left" data-aos-offset="250">
 							<p>We are a team of young and ambitious people who love what they do! Uniting your energy
 								creativity and commitment to success, we created a soulful sunglasses network for you
 								SUNGLASSES, where you want to come back again and again ...</p>
@@ -188,9 +265,10 @@
 				<div class="section-title">
 					<div class="content">
 						<h2 class="section-title__wrapp">
-							<span class="section-title__item">top qualities</span>
-							<span class="section-title__item">top qualities</span>
-							<span class="section-title__num">04</span>
+							<span class="section-title__item" data-aos="anim_title">top qualities</span>
+							<span class="section-title__item" data-aos="anim_title" data-aos-delay="100">top
+								qualities</span>
+							<span class="section-title__num" data-aos="anim_title">04</span>
 						</h2>
 					</div>
 				</div>
@@ -205,9 +283,11 @@
 						<!-- div .top__txt -->
 						<div class="top__txt">
 
-							<div class="top__item">
+							<div class="top__item" data-aos="anim_left" data-id="1">
+								<!-- <div class="top__item-wrapp" data-id="1"> -->
 								<div class="top__head">
-									<h3>/1/reliability</h3>
+									<h3>/<span class="top__head_hover">1</span>/<span
+											class="top__head_actve">reliability</span></h3>
 								</div>
 								<div class="top__descript">
 									<p>
@@ -217,41 +297,74 @@
 										quisquam debitis!
 									</p>
 								</div>
+								<!-- </div> -->
 							</div>
 
-							<div class="top__item">
+							<div class="top__item" data-aos="anim_left" data-id="2">
+								<!-- <div class="top__item-wrapp" data-id="2"> -->
 								<div class="top__head">
-									<h3>/2/quality</h3>
+									<h3>/<span class="top__head_hover">2</span>/<span
+											class="top__head_actve">quality</span></h3>
 								</div>
 								<div class="top__descript">
-									<p></p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Suscipit recusandae autem omnis veritatis aliquam. Corrupti tenetur soluta
+										provident
+										quisquam debitis!</p>
 								</div>
+								<!-- </div> -->
 							</div>
 
-							<div class="top__item">
+							<div class="top__item" data-aos="anim_left" data-id="3">
+								<!-- <div class="top__item-wrapp" data-id="3"> -->
 								<div class="top__head">
-									<h3>/3/new technology</h3>
+									<h3>/<span class="top__head_hover">3</span>/<span class="top__head_actve">new
+											technology</span></h3>
 								</div>
 								<div class="top__descript">
-									<p></p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Suscipit recusandae autem omnis veritatis aliquam. Corrupti tenetur soluta
+										provident
+										quisquam debitis!</p>
 								</div>
+								<!-- </div> -->
 							</div>
 
-							<div class="top__item">
+							<div class="top__item" data-aos="anim_left" data-id="4">
+								<!-- <div class="top__item-wrapp" data-id="4"> -->
 								<div class="top__head">
-									<h3>/4/warranty</h3>
+									<h3>/<span class="top__head_hover">4</span>/<span
+											class="top__head_actve">warranty</span></h3>
 								</div>
 								<div class="top__descript">
-									<p></p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Suscipit recusandae autem omnis veritatis aliquam. Corrupti tenetur soluta
+										provident
+										quisquam debitis!</p>
 								</div>
+								<!-- </div> -->
 							</div>
 
 						</div>
 						<!-- div .top__txt END -->
 
 						<!-- div .top__img -->
-						<div class="top__img">
+						<div class="top__img" data-aos="anim_scale">
 							<div class="top__img-line"></div>
+							<div class="top__img-wrapp">
+								<span id="1-top__img" class="top__img-item">
+									<img src="img/qualities/top1.jpg" alt="top1.jpg">
+								</span>
+								<span id="2-top__img" class="top__img-item">
+									<img src="img/qualities/top2.jpg" alt="top2.jpg">
+								</span>
+								<span id="3-top__img" class="top__img-item">
+									<img src="img/qualities/top3.jpg" alt="top3.jpg">
+								</span>
+								<span id="4-top__img" class="top__img-item">
+									<img src="img/qualities/top4.jpg" alt="top4.jpg">
+								</span>
+							</div>
 						</div>
 						<!-- div .top__img END -->
 					</div>
@@ -268,9 +381,10 @@
 				<div class="section-title">
 					<div class="content">
 						<h2 class="section-title__wrapp">
-							<span class="section-title__item">modern design</span>
-							<span class="section-title__item">modern design</span>
-							<span class="section-title__num">05</span>
+							<span class="section-title__item" data-aos="anim_title">modern design</span>
+							<span class="section-title__item" data-aos="anim_title" data-aos-delay="100">modern
+								design</span>
+							<span class="section-title__num" data-aos="anim_title">05</span>
 						</h2>
 					</div>
 				</div>
@@ -283,12 +397,12 @@
 					<div class="modern__wrapp">
 
 						<div class="modern__item">
-							<div class="modern__img">
+							<div class="modern__img" data-aos="anim_scale" data-aos-offset="250">
 								<div class="modern__img-wrapp">
 									<img src="img/modern/modern1.jpg" alt="modern1">
 								</div>
 							</div>
-							<div class="modern__txt">
+							<div class="modern__txt" data-aos="anim_left" data-aos-offset="250">
 								<h3>design/1/</h3>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut.</p>
@@ -296,25 +410,25 @@
 						</div>
 
 						<div class="modern__item">
-							<div class="modern__txt left">
+							<div class="modern__txt left" data-aos="anim_left" data-aos-offset="250">
 								<h3>design/2/</h3>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut.</p>
 							</div>
-							<div class="modern__img right">
-								<div class="modern__img-wrapp">
+							<div class="modern__img right" data-aos="anim_scale" data-aos-offset="250">
+								<div class="modern__img-wrapp right">
 									<img src="img/modern/modern2.jpg" alt="modern2">
 								</div>
 							</div>
 						</div>
 
 						<div class="modern__item">
-							<div class="modern__img">
+							<div class="modern__img" data-aos="anim_scale" data-aos-offset="250">
 								<div class="modern__img-wrapp">
 									<img src="img/modern/modern3.jpg" alt="modern3">
 								</div>
 							</div>
-							<div class="modern__txt">
+							<div class="modern__txt" data-aos="anim_left" data-aos-offset="250">
 								<h3>design/3/</h3>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut.</p>
@@ -335,9 +449,9 @@
 				<div class="section-title">
 					<div class="content">
 						<h2 class="section-title__wrapp">
-							<span class="section-title__item">brends</span>
-							<span class="section-title__item">brends</span>
-							<span class="section-title__num">06</span>
+							<span class="section-title__item" data-aos="anim_title">brends</span>
+							<span class="section-title__item" data-aos="anim_title" data-aos-delay="100">brends</span>
+							<span class="section-title__num" data-aos="anim_title">06</span>
 						</h2>
 					</div>
 				</div>
@@ -349,28 +463,28 @@
 					<!-- div .brends__wrapp -->
 					<div class="brends__wrapp">
 
-						<div class="brends__item">
+						<div class="brends__item" data-aos="anim_scale">
 							<img src="img/brends/brend1.png" alt="brend1">
 						</div>
-						<div class="brends__item">
+						<div class="brends__item" data-aos="anim_scale">
 							<img src="img/brends/brend2.png" alt="brend2">
 						</div>
-						<div class="brends__item">
+						<div class="brends__item" data-aos="anim_scale">
 							<img src="img/brends/brend3.png" alt="brend3">
 						</div>
-						<div class="brends__item">
+						<div class="brends__item" data-aos="anim_scale">
 							<img src="img/brends/brend4.png" alt="brend4">
 						</div>
-						<div class="brends__item">
+						<div class="brends__item" data-aos="anim_scale">
 							<img src="img/brends/brend5.png" alt="brend5">
 						</div>
-						<div class="brends__item">
+						<div class="brends__item" data-aos="anim_scale">
 							<img src="img/brends/brend6.png" alt="brend6">
 						</div>
-						<div class="brends__item">
+						<div class="brends__item" data-aos="anim_scale">
 							<img src="img/brends/brend7.png" alt="brend7">
 						</div>
-						<div class="brends__item">
+						<div class="brends__item" data-aos="anim_scale">
 							<img src="img/brends/brend8.png" alt="brend8">
 						</div>
 
@@ -382,15 +496,16 @@
 			<!-- section .brends END -->
 
 			<!-- section .getin -->
-			<section class="getin _padd_top-bott">
+			<section id="contact" class="getin _padd_top-bott">
 
 				<!-- div .section-title -->
 				<div class="section-title">
 					<div class="content">
 						<h2 class="section-title__wrapp">
-							<span class="section-title__item">get in touch</span>
-							<span class="section-title__item">get in touch</span>
-							<span class="section-title__num">07</span>
+							<span class="section-title__item" data-aos="anim_title">get in touch</span>
+							<span class="section-title__item" data-aos="anim_title" data-aos-delay="100">get in
+								touch</span>
+							<span class="section-title__num" data-aos="anim_title">07</span>
 						</h2>
 					</div>
 				</div>
@@ -403,16 +518,16 @@
 					<ul class="getin__wrapp">
 
 						<li class="getin__item">
-							<a href="#" class="getin__link">instagram</a>
+							<a href="#" class="getin__link" data-aos="anim_left">instagram</a>
 						</li>
 						<li class="getin__item">
-							<a href="#" class="getin__link">telegram</a>
+							<a href="#" class="getin__link" data-aos="anim_left">telegram</a>
 						</li>
 						<li class="getin__item">
-							<a href="tel:#" class="getin__link">+38 (098) 379 5719</a>
+							<a href="tel:#" class="getin__link" data-aos="anim_left">+38 (098) 379 5719</a>
 						</li>
 						<li class="getin__item">
-							<a href="mailto:#" class="getin__link">sun.glasses@gmail.com</a>
+							<a href="mailto:#" class="getin__link" data-aos="anim_left">sun.glasses@gmail.com</a>
 						</li>
 
 					</ul>
@@ -433,7 +548,26 @@
 
 	<!-- script -->
 	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/pixi.min.js"></script>
+	<!-- <script src="js/three.min.js"></script> -->
+	<script src="js/TweenMax.min.js"></script>
+	<!-- <script src="js/hover-effect.umd.js"></script> -->
+	<script src="js/displacement-img.js"></script>
+	<script src="js/aos.js"></script>
 	<script src="js/js.js"></script>
+	<script>
+		//hover-work
+		// Array.from(document.querySelectorAll('.displacement')).forEach((e) => {
+		// 	const imgs = Array.from(e.querySelectorAll('img'));
+		// 	new hoverEffect({
+		// 		parent: e,
+		// 		intensity: 0.3,
+		// 		image1: imgs[0].getAttribute('src'),
+		// 		image2: imgs[1].getAttribute('src'),
+		// 		displacementImage: 'img/displacement/fluid.jpg'
+		// 	});
+		// })
+	</script>
 	<!-- script END -->
 </body>
 
