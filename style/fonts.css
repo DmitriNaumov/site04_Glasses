@@ -1,0 +1,26 @@
+/***======================= FONTS-SETTING =======================***/
+/***============================================================***/
+
+/* 1.Verdana *************************/
+/****************************************************/
+@font-face {
+	/* name font */
+	font-family: 'Montserrat-SemiBold';
+	/* URL font and type */
+	src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype"); 
+	font-style: normal;
+} 
+@font-face {
+	/* name font */
+	font-family: 'Montserrat-ExtraBold';
+	/* URL font and type */
+	src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"); 
+	font-style: normal;
+}
+@font-face {
+	/* name font */
+	font-family: 'Montserrat-Black';
+	/* URL font and type */
+	src: url("../fonts/Montserrat-Black.ttf") format("truetype"); 
+	font-style: normal;
+}

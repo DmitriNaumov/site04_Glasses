@@ -1,0 +1,5 @@
+User-agent: *
+Disalow: /errors/
+Disalow: /js/
+Disalow: /style/
+Disalow: /fonts/
